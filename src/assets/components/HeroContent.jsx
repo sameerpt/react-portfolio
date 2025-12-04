@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import UserDetails from './UserDetails'
 
 export default function HeroContent() {
@@ -21,15 +22,21 @@ export default function HeroContent() {
         technologies. I focus on clean UI, optimized performance and solving
         real-world problems through code.
       </p>
+      <a
+        href="/SameerResume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="mt-6 font-mono border border-amber-300 px-4 py-2 rounded-2xl hover:bg-amber-300 hover:text-black transition cursor-pointer">
+          Get in Touch
+        </button>
+      </a>
 
-      <button className="mt-6 font-mono border border-amber-300 px-4 py-2 rounded-2xl hover:bg-amber-300 hover:text-black transition cursor-pointer">
-        Get in Touch
-      </button>
 
       <div className="mt-1">
         <UserDetails />
       </div>
-      
+
     </div>
   );
 }
