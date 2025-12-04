@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const interval = setTimeout(() => {
       setLoading(false)
-    }, 2500)
+    }, 12500)
     return () => clearTimeout(interval)
   }, [])
   return (
