@@ -33,7 +33,7 @@ export default function HeroContent() {
           </button>
         </a>
         <Link
-         to="/projects"
+          to="/projects"
         >
           <button className=" font-mono border border-amber-300 px-4 py-2 rounded-2xl hover:bg-amber-300 hover:text-black transition cursor-pointer">
             My Projects
