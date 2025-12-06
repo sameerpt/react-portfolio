@@ -30,7 +30,7 @@ function App() {
 
       const timer = setTimeout(() => {
         setPageLoading(false)
-      }, 600) 
+      }, 600)
 
       return () => clearTimeout(timer)
     }
