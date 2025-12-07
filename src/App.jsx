@@ -48,7 +48,6 @@ function App() {
 
       <BackGround />
       <NavBar />
-
       <Routes>
         <Route path="/projects" element={<Projects />} />
         <Route path="/" element={<HeroContent />} />
