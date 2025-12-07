@@ -7,7 +7,7 @@ export default function NavBar() {
         <ul className='flex justify-center  items-center w-4/14 gap-9 font-bold cursor-pointer font-mono text-[1.3rem]  md:text-[1.6rem] px-10 py-3 rounded-3xl'>
           <Link to='/' className='hover:text-amber-400 text-amber-300'>Home</Link>
           <li>About</li>
-         <Link to='/project' className='hover:text-amber-200'>Projects</Link>
+         <Link to='/projects' className='hover:text-amber-200'>Projects</Link>
         </ul>
 
       </div>
