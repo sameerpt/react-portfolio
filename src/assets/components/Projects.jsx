@@ -99,8 +99,6 @@ export default function Projects() {
 
             </motion.div>
 
-
-
             <motion.div
                 initial="hidden"
                 whileInView="show"
@@ -108,7 +106,7 @@ export default function Projects() {
                 className="max-w-6xl mx-auto"
             >
 
-                <motion.h1 variants={fadeUp} className="md:text-5xl text-4xl font-bold mb-13 text-amber-200 font-mono">
+                <motion.h1 variants={fadeUp} className="md:text-5xl text-4xl> font-bold mb-13 text-amber-200 font-mono">
                     InstaviZ
                 </motion.h1>
 
