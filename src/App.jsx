@@ -8,6 +8,7 @@ import SampleLoading from './assets/components/SampleLoading'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Projects from './assets/components/Projects'
 import About from './assets/components/AboutPage'
+import RoundedCursor from './assets/components/RoundCursor'
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
 
   return (
     <>
+      <RoundedCursor />
       {pageLoading && <SampleLoading />}
 
       <BackGround />
