@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import UserDetails from './UserDetails'
 
 export default function HeroContent() {
@@ -24,21 +23,22 @@ export default function HeroContent() {
       </p>
       <div className='flex gap-6 mt-4'>
         <a
-          href="/SameerResume.pdf"
-          target="_blank"
+        href='/resume.pdf'
+          download="/resume.pdf"
           rel="noopener noreferrer"
         >
           <button className="font-mono border border-amber-300 px-4 py-2 rounded-2xl hover:bg-amber-300 hover:text-black transition cursor-pointer">
-            Get in Touch
+            Download CV
           </button>
         </a>
-        <Link
-          to="/projects"
+        <a
+        href="https://wa.me/919778389186?text=Hi%20Sameer,%20I%20saw%20your%20portfolio,%20how%20are%20you%20?"
+        target='_blank'
         >
           <button className=" font-mono border border-amber-300 px-4 py-2 rounded-2xl hover:bg-amber-300 hover:text-black transition cursor-pointer">
-            My Projects
+           Get in Touch
           </button>
-        </Link>
+        </a>
       </div>
 
 
