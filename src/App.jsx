@@ -11,53 +11,48 @@ import About from './assets/components/AboutPage'
 import RoundedCursor from './assets/components/RoundCursor'
 
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
+  const [videoReady, setVideoReady] = useState(false);
 
-  const [initialLoading, setInitialLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setInitialLoading(false)
-    }, 2500)
-    return () => clearTimeout(timer)
-  }, [])
-
-
-
-  const location = useLocation()
-  const [pageLoading, setPageLoading] = useState(false)
+  const location = useLocation();
+  const [pageLoading, setPageLoading] = useState(false);
 
   useEffect(() => {
-    if (!initialLoading) {
-      setPageLoading(true)
+    const t = setTimeout(() => setShowIntro(false), 2500);
+    return () => clearTimeout(t);
+  }, []);
 
-      const timer = setTimeout(() => {
-        setPageLoading(false)
-      }, 600)
-
-      return () => clearTimeout(timer)
+  useEffect(() => {
+    if (!showIntro && videoReady) {
+      setPageLoading(true);
+      const t = setTimeout(() => setPageLoading(false), 600);
+      return () => clearTimeout(t);
     }
-  }, [location.pathname])
-
-
-
-  if (initialLoading) return <Loader />
-
-
+  }, [location.pathname, showIntro, videoReady]);
 
   return (
     <>
-      <RoundedCursor />
-      {pageLoading && <SampleLoading />}
+      <BackGround onReady={() => setVideoReady(true)} />
 
-      <BackGround />
-      <NavBar />
-      <Routes>
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/" element={<HeroContent />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      {showIntro && <Loader />}
+
+      {!showIntro && !videoReady && <SampleLoading />}
+
+      {!showIntro && videoReady && (
+        <>
+          <RoundedCursor />
+          {pageLoading && <SampleLoading />}
+
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<HeroContent />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </>
+      )}
     </>
-  )
+  );
 }
 
 export default App
