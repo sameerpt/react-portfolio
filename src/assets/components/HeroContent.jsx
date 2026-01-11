@@ -23,7 +23,7 @@ export default function HeroContent() {
       </p>
       <div className='flex gap-6 mt-4'>
         <a
-        href='/resume.pdf'
+        href='/sameer.pdf'
           download="/resume.pdf"
           rel="noopener noreferrer"
         >

@@ -24,7 +24,7 @@ export default function UserDetails() {
                             className="w-12 h-12 bg-linear-to-br from-gray-700 to-gray-900 
               rounded-xl flex items-center justify-center shadow-lg border border-gray-600/50 
               cursor-pointer transform transition-all duration-300 ease-out 
-              hover:scale-110 hover:-translate-y-2 hover:shadow-2xl"
+              hover:scale-105 hover:-translate-y-1 hover:shadow-2xl"
                         >
                             <FaGithub size={32} className="text-white" />
                         </div>
@@ -40,7 +40,7 @@ export default function UserDetails() {
                             className="w-12 h-12 bg-linear-to-br from-blue-600 to-blue-800 
               rounded-xl flex items-center justify-center shadow-lg border border-blue-500/50 
               cursor-pointer transform transition-all duration-300 ease-out 
-              hover:scale-110 hover:-translate-y-2 hover:shadow-2xl"
+              hover:scale-105 hover:-translate-y-1 hover:shadow-2xl"
                         >
                             <FaLinkedin size={32} className="text-white" />
                         </div>
