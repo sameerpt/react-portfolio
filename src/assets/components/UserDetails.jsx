@@ -15,7 +15,7 @@ export default function UserDetails() {
 
                 <div className="relative flex items-end gap-x-4 p-2">
                     <a
-                        href="https://github.com/sameer4712"
+                        href="https://github.com/sameerpt"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
