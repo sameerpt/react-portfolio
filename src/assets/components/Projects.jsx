@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Snowfall from "react-snowfall";
 
 export default function Projects() {
 
@@ -33,7 +34,7 @@ export default function Projects() {
 
     return (
         <div className="text-white px-6 mt-14 flex flex-col gap-28">
-
+            <Snowfall color="white"/>
             <motion.div
                 initial="hidden"
                 whileInView="show"
